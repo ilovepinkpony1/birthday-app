@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import './tabLinks.css';
-import BirthdayList from '../BirthdayList/BirthdayList';
+import BirthdayListHandler from '../BirthdayList/BirthdayListHandler';
+import { TODAY, RECENT, NEARBY } from '../../constants';
 
 
 const TabLinks = () => {
@@ -30,7 +31,11 @@ const TabLinks = () => {
 
     </div>
 
-    <Route path="/" component={BirthdayList} />
+      <Route path="/recent/" render={() => <BirthdayListHandler tab={RECENT} />} />
+
+      <Route path="/" exact render={() => <BirthdayListHandler tab={TODAY} />} />
+      
+      <Route path="/nearby/" render={() => <BirthdayListHandler tab={NEARBY} />} />
 
     </BrowserRouter>
   )

@@ -1,18 +1,43 @@
 import './birthdayList.css';
-import React from 'react';
+import React, { useEffect } from 'react';
+import { getDatesRange } from '../../utils/getDatesRange';
+import User from '../User/User';
 
 const BirthdayList = (props) => {
-  const { data, loadData, tab } = props;
+  const { data, loadData, tab, requested } = props;
+
+  useEffect(() => {
+    if (!requested) {
+      const [dateFrom, dateTo] = getDatesRange(tab);
+      loadData(dateFrom, dateTo, tab);
+    }
+  });
 
   if (!data) {
-    loadData('01.01', '01.02', tab)
     return (
-      'loading...'
+      <div>
+        'loading...'
+      </div>
+      
+    )
+  } else if (data === []){
+    return (
+      <div>
+        'no results'
+      </div>
     )
   } else {
-    console.log(data);
-    return (
-      'loaded'
+     return (
+      <div>
+         {data.map(user => <User 
+                            key={user.id}
+                            name={user.name}
+                            avatarUrl={user.avatarUrl}
+                            jobTitle={user.jobTitle}
+                            birthday={user.birthday}
+                          />)}
+        no users
+      </div>
     )
   }
 

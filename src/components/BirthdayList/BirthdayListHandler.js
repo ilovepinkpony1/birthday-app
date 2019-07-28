@@ -5,27 +5,33 @@ import { load } from '../../redux/actions';
 
 function mapStateToProps(state, ownProps) {
   const { tab } = ownProps;
-  switch (tab) {
-    case RECENT:
+  const propsHandler =  {
+    [RECENT]: () => {
       return {
         data: state.recentData,
-        tab
-      };
-    case TODAY:
+        requested: state.requested,
+        tab,
+
+      }
+    },
+
+    [TODAY]: () => {
       return {
         data: state.todaysData,
-        tab
-      };
-    case NEARBY:
+        requested: state.requested,
+        tab,
+      }
+    },
+
+    [NEARBY]: () => {
       return {
         data: state.nearbyData,
-        tab
-      };
-    default:
-      return {
-        data: null
-      };
+        requested: state.requested,
+        tab,
+      }
+    }
   }
+  return propsHandler[tab]();
 }
 
 function mapDispatchToProps(dispatch) {

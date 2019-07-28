@@ -1,10 +1,12 @@
-import { BASE_API } from '../constants';
+import { getData } from '../utils/api';
 export const DISPLAY = 'display';
+export const SET_REQUESTED_TRUE = 'set_requested_true';
+export const SET_REQUESTED_FALSE = 'set_requested_false';
 
 export function load(from, to, tab) {
   return dispatch => {
-    fetch(`${BASE_API}?dateFrom=${from}&dateTo=${to}`)
-      .then(response => response.json())
+    dispatch(setRequestedTrue())
+    getData(from, to)
       .then(data => {
         dispatch(display(data, tab));
       });
@@ -19,4 +21,16 @@ function display(data, tab) {
       tab
     }
   };
+}
+
+function setRequestedTrue() {
+  return {
+    type: SET_REQUESTED_TRUE
+  }
+}
+
+function setRequestedFalse() {
+  return {
+    type: SET_REQUESTED_FALSE
+  }
 }

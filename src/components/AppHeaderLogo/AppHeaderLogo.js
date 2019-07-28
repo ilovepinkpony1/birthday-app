@@ -1,5 +1,5 @@
 import React from 'react';
-import './appHeaderLogo.css';
+import './appHeaderLogo.scss';
 
 const AppHeaderLogo = (props) => {
   const { src, alt } = props;
@@ -7,7 +7,7 @@ const AppHeaderLogo = (props) => {
   return (
     <section className="header-wrapper">
       <div className="header-logo_container">
-        <img src={src} alt={alt} />
+        <img src={src} alt={alt} className="header-logo"/>
       </div>
     </section>
   )

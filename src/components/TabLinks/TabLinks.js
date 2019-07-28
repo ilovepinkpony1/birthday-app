@@ -12,7 +12,7 @@ const TabLinks = (props) => {
   } = props;
   
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={'/birthday-app'}>
 
     <div className="tab-links_wrapper">
 

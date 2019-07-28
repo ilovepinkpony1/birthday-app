@@ -2,9 +2,8 @@ import { TODAY, RECENT, NEARBY } from '../constants';
 
 export const sortByType = (array, tab) => {
   const typeHandler = {
-    [TODAY]: (array) => {
+    [TODAY]: array => {
       return array.sort((a, b) => {
-        debugger;
         if (a.name[0].toLowerCase() > b.name[0].toLowerCase()) {
           return 1;
         }
@@ -15,9 +14,8 @@ export const sortByType = (array, tab) => {
       });
     },
 
-    [RECENT]: (array) => {
+    [RECENT]: array => {
       return array.sort((a, b) => {
-
         const aDayOfBirth = a.birthday.split('-')[2];
         const bDayOfBirth = b.birthday.split('-')[2];
 
@@ -36,12 +34,11 @@ export const sortByType = (array, tab) => {
           }
           return 0;
         }
-      })
+      });
     },
 
-    [NEARBY]: (array) => {
+    [NEARBY]: array => {
       return array.sort((a, b) => {
-
         const aDayOfBirth = a.birthday.split('-')[2];
         const bDayOfBirth = b.birthday.split('-')[2];
 
@@ -60,8 +57,8 @@ export const sortByType = (array, tab) => {
           }
           return 0;
         }
-      })
-    },
-  }
+      });
+    }
+  };
   return typeHandler[tab](array);
-}
+};

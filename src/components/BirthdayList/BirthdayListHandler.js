@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import BirthdayList from './BirthdayList';
 import { TODAY, RECENT, NEARBY } from '../../constants';
-import { load } from '../../redux/actions';
+import { load, addUsers } from '../../redux/actions';
 
 function mapStateToProps(state, ownProps) {
   const { tab } = ownProps;
@@ -10,6 +10,8 @@ function mapStateToProps(state, ownProps) {
       return {
         data: state.recentData,
         requested: state.requested,
+        usersAddedForRecent: state.usersAddedForRecent,
+        usersAddedForNearby: state.usersAddedForNearby,
         tab,
 
       }
@@ -19,6 +21,8 @@ function mapStateToProps(state, ownProps) {
       return {
         data: state.todaysData,
         requested: state.requested,
+        usersAddedForRecent: state.usersAddedForRecent,
+        usersAddedForNearby: state.usersAddedForNearby,
         tab,
       }
     },
@@ -27,6 +31,8 @@ function mapStateToProps(state, ownProps) {
       return {
         data: state.nearbyData,
         requested: state.requested,
+        usersAddedForRecent: state.usersAddedForRecent,
+        usersAddedForNearby: state.usersAddedForNearby,
         tab,
       }
     }
@@ -36,7 +42,8 @@ function mapStateToProps(state, ownProps) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    loadData: (from, to, tab) => dispatch(load(from, to, tab))
+    loadData: (from, to, tab) => dispatch(load(from, to, tab)),
+    addUsers: (tab) => dispatch(addUsers(tab))
   };
 }
 

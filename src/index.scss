@@ -1,26 +1,26 @@
-@font-face {
-  font-family: "Vodafone-Lite";
-  src: local("Vodafone-Lite") url(./fonts/VodafoneLt.ttf) format("truetype");
-  font-weight: 300;
-  font-style: normal;
-}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Vodafone-Lite';
+  src: url(./fonts/VodafoneLt.ttf) format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
 
 @font-face {
-  font-family: "Vodafone-Regular";
-  src: local("Vodafone-Regular") url(./fonts/VodafoneRg.ttf) format("truetype");
+  font-family: 'Vodafone-Regular';
+  src: url(./fonts/VodafoneRg.ttf) format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Vodafone-Bold";
-  src: local("Vodafone-Bold") url(./fonts/VodafoneRgBd.ttf) format("truetype");
+  font-family: 'Vodafone-Bold';
+  src: url(./fonts/VodafoneRgBd.ttf) format('truetype');
   font-weight: bold;
   font-style: normal;
 }

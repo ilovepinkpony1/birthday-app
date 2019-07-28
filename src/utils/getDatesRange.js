@@ -29,8 +29,8 @@ export const getDatesRange = tab => {
 
   setTimeForDate(dateNowForNearDate, dayFrom);
   setTimeForDate(dateNowForFarDate, dayTo);
-  const [dayNear, monthNear] = normalizeDate(dateNowForNearDate);
-  const [dayFar, monthFar] = normalizeDate(dateNowForFarDate);
+  let [dayNear, monthNear] = normalizeDate(dateNowForNearDate);
+  let [dayFar, monthFar] = normalizeDate(dateNowForFarDate);
 
   if (
     tab === TODAY &&

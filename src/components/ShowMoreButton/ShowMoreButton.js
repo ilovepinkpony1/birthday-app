@@ -1,10 +1,28 @@
 import React from 'react';
-import './showMoreButton.css';
+import './showMoreButton.scss';
+import { RECENT, NEARBY } from '../../constants';
 
 const ShowMoreButton = (props) => {
+  const { 
+    addUsers,
+    tab,
+    usersAddedForRecent,
+    usersAddedForNearby } = props;
+
   return (
     <div className="show-more-button_wrapper">
-      <button className="show-more-button">показать еще</button>
+
+      <button
+        className="show-more-button"
+        onClick={() => {
+          if ((tab === RECENT && !usersAddedForRecent)
+              || (tab === NEARBY && !usersAddedForNearby)) {
+            addUsers(tab);
+          }
+        }}>
+          показать еще
+        </button>
+        
     </div>
   )
 }

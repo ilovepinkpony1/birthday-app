@@ -1,15 +1,22 @@
 import { connect } from 'react-redux';
 import TabLinks from './TabLinks';
-import { setRequestedFalse } from '../../redux/actions';
+import { setRequestedFalse, setActiveLink } from '../../redux/actions';
+
+function mapStateToProps(state) {
+  return {
+    activeLink: state.activeLink,
+  }
+}
 
 function mapDispatchToProps(dispatch) {
   return {
-    setRequestFalse: () => dispatch(setRequestedFalse())
+    setRequestFalse: () => dispatch(setRequestedFalse()),
+    setActiveLink: (tab) => dispatch(setActiveLink(tab)),
   };
 }
 
 const TabLinksHandler = connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(TabLinks);
 

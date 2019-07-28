@@ -1,30 +1,32 @@
-export const normilizeBirthDate = (birth) => {
+export const normilizeBirthDate = birth => {
   const [, month, day] = birth.split('-');
 
   switch (month) {
-    case ('01'):
+    case '01':
       return `${day} січня`;
-    case ('02'):
+    case '02':
       return `${day} лютого`;
-    case ('03'):
+    case '03':
       return `${day} березня`;
-    case ('04'):
+    case '04':
       return `${day} квітня`;
-    case ('05'):
+    case '05':
       return `${day} травня`;
-    case ('06'):
+    case '06':
       return `${day} червня`;
-    case ('07'):
+    case '07':
       return `${day} липня`;
-    case ('08'):
+    case '08':
       return `${day} серпня`;
-    case ('09'):
+    case '09':
       return `${day} вересня`;
-    case ('10'):
+    case '10':
       return `${day} жовтня`;
-    case ('11'):
+    case '11':
       return `${day} листопаду`;
-    case ('12'):
+    case '12':
       return `${day} грудня`;
+    default:
+      return '';
   }
-}
+};

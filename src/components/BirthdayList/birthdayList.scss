@@ -1,0 +1,33 @@
+@import '../../variables.scss';
+
+.birthday-list_wrapper {
+  margin: 0 auto;
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: auto auto;
+  max-width: 900px;
+  display: -ms-grid;
+  -ms-grid-columns: 50% 50%;
+  -ms-grid-rows: auto auto;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0;
+  color: red;
+}
+
+.empty-list {
+  margin: 100px 0;
+  text-align: center;
+  color: $dark-grey;
+  font-family: $textLight;
+  font-size: 24px;
+}
+
+@media (max-width: 640px) {
+  .birthday-list_wrapper {
+    grid-template-columns: auto;
+  }
+}

@@ -1,0 +1,53 @@
+@import '../../variables.scss';
+
+.tab-links_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.tab-link {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $red;
+  font-family: $textRegular;
+  font-weight: normal;
+  outline: none;
+  display: block;
+  text-align: center;
+}
+
+.tab-link_under-text {
+  font-size: 12px;
+}
+
+.tab-link_container {
+  margin-right: 200px;
+  transition: 0.5s all ease;
+}
+
+.tab-link_container:last-child {
+  margin-right: 0;
+}
+
+.tab-link_container:hover {
+  transform: scale(1.2)
+}
+
+.active {
+  font-family: $textBold;
+  font-weight: bolder;
+  transform: scale(1.1);
+}
+
+@media (max-width: 700px) {
+  .tab-link_container {
+    margin-right: 100px;
+  }
+}
+
+@media (max-width: 450px) {
+  .tab-link_container {
+    margin-right: 30px;
+  }
+}

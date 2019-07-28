@@ -1,12 +1,16 @@
 import React from 'react';
 import { BrowserRouter, Route, Link } from "react-router-dom";
-import './tabLinks.css';
+import './tabLinks.scss';
 import BirthdayListHandler from '../BirthdayList/BirthdayListHandler';
 import { TODAY, RECENT, NEARBY } from '../../constants';
 
-
 const TabLinks = (props) => {
-  const { setRequestFalse } = props;
+  const { 
+    setRequestFalse, 
+    activeLink, 
+    setActiveLink 
+  } = props;
+  
   return (
     <BrowserRouter>
 
@@ -14,17 +18,28 @@ const TabLinks = (props) => {
 
       <div className="tab-link_container">
         <Link 
-          to="/recent/" 
-          onClick={setRequestFalse}
+          to='/recent/' 
+            onClick={() => {
+              setRequestFalse();
+              setActiveLink(RECENT);
+            }}
+            className={activeLink === RECENT ? 'tab-link active' : 'tab-link'}
         >
-          недавние
+          недавние<br/>
+          <span className="tab-link_under-text">
+            даты
+          </span>
         </Link>
       </div>
 
       <div className="tab-link_container">
         <Link 
-          to="/" 
-          onClick={setRequestFalse}
+          to='/' 
+            onClick={() => {
+              setRequestFalse();
+              setActiveLink(TODAY);
+            }}
+            className={activeLink === TODAY ? 'tab-link active' : 'tab-link'}
         >
           сегодня
         </Link>
@@ -32,10 +47,17 @@ const TabLinks = (props) => {
 
       <div className="tab-link_container">
         <Link 
-          to="/nearby/" 
-          onClick={setRequestFalse}
+          to='/nearby/'
+          onClick={() => {
+            setRequestFalse();
+            setActiveLink(NEARBY);
+          }}
+            className={activeLink === NEARBY ? 'tab-link active' : 'tab-link'}
         >
-          ближайшие
+          ближайшие<br/>
+          <span className="tab-link_under-text">
+            даты
+          </span>
         </Link>
       </div>
 

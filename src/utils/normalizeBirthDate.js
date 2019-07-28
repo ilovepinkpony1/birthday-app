@@ -1,5 +1,5 @@
 export const normilizeBirthDate = (birth) => {
-  const [year, month, day] = birth.split('-');
+  const [, month, day] = birth.split('-');
 
   switch (month) {
     case ('01'):

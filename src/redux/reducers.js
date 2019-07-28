@@ -8,9 +8,8 @@ import {
   RECENT, 
   NEARBY 
 } from '../constants';
-import { 
-  sortByType 
-} from '../utils/sortByType';
+import { sortByType } from '../utils/sortByType';
+
 
 const initialState = {
   requested: false,

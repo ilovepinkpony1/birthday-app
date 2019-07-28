@@ -7,8 +7,9 @@ const BirthdayList = (props) => {
   const { data, loadData, tab, requested } = props;
 
   useEffect(() => {
-    if (!requested) {
+    if (!requested && !data) {
       const [dateFrom, dateTo] = getDatesRange(tab);
+      
       loadData(dateFrom, dateTo, tab);
     }
   });
@@ -20,7 +21,7 @@ const BirthdayList = (props) => {
       </div>
       
     )
-  } else if (data === []){
+  } else if (data.length === 0){
     return (
       <div>
         'no results'
@@ -36,7 +37,6 @@ const BirthdayList = (props) => {
                             jobTitle={user.jobTitle}
                             birthday={user.birthday}
                           />)}
-        no users
       </div>
     )
   }

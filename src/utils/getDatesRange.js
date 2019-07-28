@@ -1,17 +1,17 @@
-import { RECENT, NEARBY } from '../constants'; 
+import { TODAY, RECENT, NEARBY } from '../constants';
 
 const setTimeForDate = (date, range) => {
   date.setTime(date.getTime() + range);
-}
+};
 
-const normalizeDate = (date) => {
+const normalizeDate = date => {
   return [
     String(date.getDate()).padStart(2, '0'),
-    String(date.getMonth() + 1).padStart(2, '0'),
-  ]
-}
+    String(date.getMonth() + 1).padStart(2, '0')
+  ];
+};
 
-export const getDatesRange = (tab) => {
+export const getDatesRange = tab => {
   let dayFrom = 0;
   let dayTo = 0;
 
@@ -31,8 +31,13 @@ export const getDatesRange = (tab) => {
   setTimeForDate(dateNowForFarDate, dayTo);
   const [dayNear, monthNear] = normalizeDate(dateNowForNearDate);
   const [dayFar, monthFar] = normalizeDate(dateNowForFarDate);
-  return [
-    `${monthNear}.${dayNear}`,
-    `${monthFar}.${dayFar}`,
-  ]
-}
+
+  if (
+    tab === TODAY &&
+    `${monthFar}.${dayFar}` === '02.28' &&
+    dateNowForFarDate.getFullYear() % 4 === 0
+  ) {
+    dayFar = '29';
+  }
+  return [`${monthNear}.${dayNear}`, `${monthFar}.${dayFar}`];
+};

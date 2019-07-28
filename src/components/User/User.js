@@ -8,7 +8,7 @@ export default function User(props) {
     <div className="user">
       <img 
         src={`http://test.anromsocial.com${avatarUrl}`} 
-        alt={`${name} personal photo`}
+        alt={`${name}`}
       />
       <p>{name}</p>
       <p>{jobTitle}</p>

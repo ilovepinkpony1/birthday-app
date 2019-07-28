@@ -4,10 +4,11 @@ export const sortByType = (array, tab) => {
   const typeHandler = {
     [TODAY]: (array) => {
       return array.sort((a, b) => {
-        if (a.name > b.name) {
+        debugger;
+        if (a.name[0].toLowerCase() > b.name[0].toLowerCase()) {
           return 1;
         }
-        if (a.name < b.name) {
+        if (a.name[0].toLowerCase() < b.name[0].toLowerCase()) {
           return -1;
         }
         return 0;
@@ -17,20 +18,20 @@ export const sortByType = (array, tab) => {
     [RECENT]: (array) => {
       return array.sort((a, b) => {
 
-        const aDayOfBirth = a.birthday.split('-')[1];
-        const bDayOfBirth = b.birthday.split('-')[1];
+        const aDayOfBirth = a.birthday.split('-')[2];
+        const bDayOfBirth = b.birthday.split('-')[2];
 
-        if (aDayOfBirth > bDayOfBirth) {
+        if (aDayOfBirth < bDayOfBirth) {
           return 1;
         }
-        if (aDayOfBirth < bDayOfBirth) {
+        if (aDayOfBirth > bDayOfBirth) {
           return -1;
         }
         if (aDayOfBirth === bDayOfBirth) {
-          if (a.name > b.name) {
+          if (a.name[0].toLowerCase() > b.name[0].toLowerCase()) {
             return 1;
           }
-          if (a.name < b.name) {
+          if (a.name[0].toLowerCase() < b.name[0].toLowerCase()) {
             return -1;
           }
           return 0;
@@ -41,8 +42,8 @@ export const sortByType = (array, tab) => {
     [NEARBY]: (array) => {
       return array.sort((a, b) => {
 
-        const aDayOfBirth = a.birthday.split('-')[1];
-        const bDayOfBirth = b.birthday.split('-')[1];
+        const aDayOfBirth = a.birthday.split('-')[2];
+        const bDayOfBirth = b.birthday.split('-')[2];
 
         if (aDayOfBirth > bDayOfBirth) {
           return 1;
@@ -51,10 +52,10 @@ export const sortByType = (array, tab) => {
           return -1;
         }
         if (aDayOfBirth === bDayOfBirth) {
-          if (a.name > b.name) {
+          if (a.name[0].toLowerCase() > b.name[0].toLowerCase()) {
             return 1;
           }
-          if (a.name < b.name) {
+          if (a.name[0].toLowerCase() < b.name[0].toLowerCase()) {
             return -1;
           }
           return 0;

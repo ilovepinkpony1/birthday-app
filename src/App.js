@@ -3,7 +3,7 @@ import store from './redux/configureStore';
 import AppHeaderLogo from './components/AppHeaderLogo/AppHeaderLogo';
 import HeaderGiftPng from './images/gift.png';
 import ShowMoreButton from './components/ShowMoreButton/ShowMoreButton';
-import TabLinks from './components/TabLinks/TabLinks';
+import TabLinksHandler from './components/TabLinks/TabLinksHandler';
 import React from 'react';
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
 
     <div className='container'>
       <AppHeaderLogo src={HeaderGiftPng} alt={'gift-logo'} />
-      <TabLinks />
+        <TabLinksHandler />
       <ShowMoreButton />
     </div>
 

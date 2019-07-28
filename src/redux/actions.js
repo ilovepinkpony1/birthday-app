@@ -5,7 +5,7 @@ export const SET_REQUESTED_FALSE = 'set_requested_false';
 
 export function load(from, to, tab) {
   return dispatch => {
-    dispatch(setRequestedTrue())
+    dispatch(setRequestedTrue());
     getData(from, to)
       .then(data => {
         dispatch(display(data, tab));
@@ -23,13 +23,13 @@ function display(data, tab) {
   };
 }
 
-function setRequestedTrue() {
+export function setRequestedTrue() {
   return {
     type: SET_REQUESTED_TRUE
   }
 }
 
-function setRequestedFalse() {
+export function setRequestedFalse() {
   return {
     type: SET_REQUESTED_FALSE
   }

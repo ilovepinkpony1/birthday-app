@@ -5,26 +5,36 @@ import BirthdayListHandler from '../BirthdayList/BirthdayListHandler';
 import { TODAY, RECENT, NEARBY } from '../../constants';
 
 
-const TabLinks = () => {
+const TabLinks = (props) => {
+  const { setRequestFalse } = props;
   return (
     <BrowserRouter>
 
     <div className="tab-links_wrapper">
 
       <div className="tab-link_container">
-        <Link to="/recent/">
+        <Link 
+          to="/recent/" 
+          onClick={setRequestFalse}
+        >
           недавние
         </Link>
       </div>
 
       <div className="tab-link_container">
-        <Link to="/">
+        <Link 
+          to="/" 
+          onClick={setRequestFalse}
+        >
           сегодня
         </Link>
       </div>
 
       <div className="tab-link_container">
-        <Link to="/nearby/">
+        <Link 
+          to="/nearby/" 
+          onClick={setRequestFalse}
+        >
           ближайшие
         </Link>
       </div>

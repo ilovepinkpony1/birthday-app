@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/=pinkpony1.github.io/birthday-app/static/css/main.a02bc84d.chunk.css",
-    "main.js": "/=pinkpony1.github.io/birthday-app/static/js/main.0ad95def.chunk.js",
-    "main.js.map": "/=pinkpony1.github.io/birthday-app/static/js/main.0ad95def.chunk.js.map",
-    "runtime~main.js": "/=pinkpony1.github.io/birthday-app/static/js/runtime~main.6024fd27.js",
-    "runtime~main.js.map": "/=pinkpony1.github.io/birthday-app/static/js/runtime~main.6024fd27.js.map",
-    "static/js/2.d2a50bc9.chunk.js": "/=pinkpony1.github.io/birthday-app/static/js/2.d2a50bc9.chunk.js",
-    "static/js/2.d2a50bc9.chunk.js.map": "/=pinkpony1.github.io/birthday-app/static/js/2.d2a50bc9.chunk.js.map",
-    "index.html": "/=pinkpony1.github.io/birthday-app/index.html",
-    "precache-manifest.a321176f8c1762a5937365ff168e9d7f.js": "/=pinkpony1.github.io/birthday-app/precache-manifest.a321176f8c1762a5937365ff168e9d7f.js",
-    "service-worker.js": "/=pinkpony1.github.io/birthday-app/service-worker.js",
-    "static/css/main.a02bc84d.chunk.css.map": "/=pinkpony1.github.io/birthday-app/static/css/main.a02bc84d.chunk.css.map",
-    "static/media/VodafoneLt.ttf": "/=pinkpony1.github.io/birthday-app/static/media/VodafoneLt.26e42e55.ttf",
-    "static/media/VodafoneRg.ttf": "/=pinkpony1.github.io/birthday-app/static/media/VodafoneRg.b9a4f470.ttf",
-    "static/media/VodafoneRgBd.ttf": "/=pinkpony1.github.io/birthday-app/static/media/VodafoneRgBd.53aed6b0.ttf",
-    "static/media/gift.png": "/=pinkpony1.github.io/birthday-app/static/media/gift.fc90f3b1.png"
+    "main.css": "/birthday-app/static/css/main.14f8f6bb.chunk.css",
+    "main.js": "/birthday-app/static/js/main.0ad95def.chunk.js",
+    "main.js.map": "/birthday-app/static/js/main.0ad95def.chunk.js.map",
+    "runtime~main.js": "/birthday-app/static/js/runtime~main.44f96cda.js",
+    "runtime~main.js.map": "/birthday-app/static/js/runtime~main.44f96cda.js.map",
+    "static/js/2.d2a50bc9.chunk.js": "/birthday-app/static/js/2.d2a50bc9.chunk.js",
+    "static/js/2.d2a50bc9.chunk.js.map": "/birthday-app/static/js/2.d2a50bc9.chunk.js.map",
+    "index.html": "/birthday-app/index.html",
+    "precache-manifest.2fc8e9ef3bea2ca53e30ad3a15e39afc.js": "/birthday-app/precache-manifest.2fc8e9ef3bea2ca53e30ad3a15e39afc.js",
+    "service-worker.js": "/birthday-app/service-worker.js",
+    "static/css/main.14f8f6bb.chunk.css.map": "/birthday-app/static/css/main.14f8f6bb.chunk.css.map",
+    "static/media/VodafoneLt.ttf": "/birthday-app/static/media/VodafoneLt.26e42e55.ttf",
+    "static/media/VodafoneRg.ttf": "/birthday-app/static/media/VodafoneRg.b9a4f470.ttf",
+    "static/media/VodafoneRgBd.ttf": "/birthday-app/static/media/VodafoneRgBd.53aed6b0.ttf",
+    "static/media/gift.png": "/birthday-app/static/media/gift.fc90f3b1.png"
   }
 }

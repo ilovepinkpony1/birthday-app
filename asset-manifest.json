@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/=pinkpony1.github.io/borthday-app/static/css/main.5592629d.chunk.css",
+    "main.js": "/=pinkpony1.github.io/borthday-app/static/js/main.0ad95def.chunk.js",
+    "main.js.map": "/=pinkpony1.github.io/borthday-app/static/js/main.0ad95def.chunk.js.map",
+    "runtime~main.js": "/=pinkpony1.github.io/borthday-app/static/js/runtime~main.6cd61198.js",
+    "runtime~main.js.map": "/=pinkpony1.github.io/borthday-app/static/js/runtime~main.6cd61198.js.map",
+    "static/js/2.d2a50bc9.chunk.js": "/=pinkpony1.github.io/borthday-app/static/js/2.d2a50bc9.chunk.js",
+    "static/js/2.d2a50bc9.chunk.js.map": "/=pinkpony1.github.io/borthday-app/static/js/2.d2a50bc9.chunk.js.map",
+    "index.html": "/=pinkpony1.github.io/borthday-app/index.html",
+    "precache-manifest.106fcae8edfcade9f9457c5d4eda4bda.js": "/=pinkpony1.github.io/borthday-app/precache-manifest.106fcae8edfcade9f9457c5d4eda4bda.js",
+    "service-worker.js": "/=pinkpony1.github.io/borthday-app/service-worker.js",
+    "static/css/main.5592629d.chunk.css.map": "/=pinkpony1.github.io/borthday-app/static/css/main.5592629d.chunk.css.map",
+    "static/media/VodafoneLt.ttf": "/=pinkpony1.github.io/borthday-app/static/media/VodafoneLt.26e42e55.ttf",
+    "static/media/VodafoneRg.ttf": "/=pinkpony1.github.io/borthday-app/static/media/VodafoneRg.b9a4f470.ttf",
+    "static/media/VodafoneRgBd.ttf": "/=pinkpony1.github.io/borthday-app/static/media/VodafoneRgBd.53aed6b0.ttf",
+    "static/media/gift.png": "/=pinkpony1.github.io/borthday-app/static/media/gift.fc90f3b1.png"
+  }
+}
